@@ -190,8 +190,8 @@ header {
    ======================== */
 .service-banner {
   max-width: 1100px;
-  margin: 60px auto 0;
-  border-radius: 8px;
+  margin: 0px auto 0;
+  border-radius: 0px;
   overflow: hidden;
 }
 
@@ -224,21 +224,36 @@ header {
 
 .last-works {
   max-width: 1100px;
-  margin: 10px auto;
-  padding: 0 10px;
+  margin: 0px auto;
+  padding: 0 0px;
 }
 
+/* បង្កើតប្លង់ដែលរូបភាពរត់បំពេញចន្លោះទំនេរ (Masonry) */
 .works-grid {
-  column-count: 3;
-  column-gap: 15px;
+  /* កំណត់ចំនួនជួរ៖ ២ ជួរសម្រាប់ Mobile និង ៣ ជួរសម្រាប់ Desktop */
+  column-count: 2; 
+  column-gap: 0px; /* ចន្លោះរវាងជួរឈរ */
+  width: 100%;
+  padding: 0 0px;
 }
 
 .works-grid img {
   width: 100%;
-  height: auto;
-  margin-bottom: 15px;
+  height: auto; /* រក្សាទំហំដើម */
   display: block;
-  border-radius: 6px;
+  border-radius: 3px;
+  
+  /* ការពារកុំឱ្យរូបភាពដាច់ពាក់កណ្តាលពេលឆ្លងជួរ */
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* សម្រាប់អេក្រង់ធំ (PC) បង្ហាញ ៣ ជួរ */
+@media (min-width: 900px) {
+  .works-grid {
+    column-count: 3;
+    column-gap: 12px;
+  }
 }
 
 /* ========================
@@ -407,8 +422,8 @@ body.dark .content-store p {
 }
 
 .Home-content img {
-  width: 40%;
-  border-radius: 15px;
+  width: 35%;
+  border-radius: 0px;
 }
 
 .Home-content p {
@@ -416,12 +431,8 @@ body.dark .content-store p {
   color: #0c96dc;
 }
 
-body.dark .Home-content p {
-  color: #e0e0e0;
-}
-
 .text-tab3 p {
-  margin: 16px 0 10px;
+  margin: 0px 0 10px;
   font-family: 'simple', sans-serif;
   font-size: 24px;
   text-align: center;
@@ -555,45 +566,6 @@ body.dark .search-input::placeholder {
   font-family: 'khala battambang', system-ui, sans-serif;
 }
 
-body.dark .no-results {
-  color: #666;
-}
-
-/* ========================
-   SCROLL TO TOP
-   ======================== */
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #32a6ff;
-  border: none;
-  cursor: pointer;
-  z-index: 2000;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s;
-}
-
-.scroll-to-top:hover {
-  background-color: #006aff;
-}
-
-.scroll-to-top img {
-  width: 20px;
-  height: auto;
-  filter: brightness(0) invert(1);
-}
-
-body.dark .scroll-to-top {
-  background: #1877f2;
-  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.5);
-}
-
 .channel-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -686,8 +658,12 @@ body.dark .scroll-to-top {
 
   .Home-content img {
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
+
+
 
 @media (max-width: 480px) {
   header {
@@ -715,7 +691,7 @@ body.dark .scroll-to-top {
 
   .panel-container {
     margin-top: 55px;
-    padding: 0 5px;
+    padding: 0 0px;
   }
 
   .box {
@@ -749,18 +725,6 @@ body.dark .scroll-to-top {
     font-weight: 500;
   }
 
-  .scroll-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
-  }
-
-  .scroll-to-top img {
-    width: 20px;
-    height: 20px;
-  }
-
   .channel-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -769,3 +733,15 @@ body.dark .scroll-to-top {
 a {
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
