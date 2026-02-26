@@ -18,13 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ============================================
   const PRODUCTS = {
     "capcut_pro": {
-      "name_km": "CapCut Pro",
-      "price": "$2.99",
-      "access": "3 ឧបករណ៍",
-      "connect": "5-10 នាទី+",
-      "plan": "1 ខែ",
-      "warranty": "មួយខែពេញ",
-      "type": "គណនីឯកជន",
       "cover": "p9.jpg",
       "benefits": [
         "Template និង Effect ពិសេស (Pro)",
@@ -33,14 +26,33 @@ document.addEventListener("DOMContentLoaded", () => {
         "Transition ស្អាត និង Smooth"
       ],
     },
+
+    "telegram": {
+      "cover": "p4.jpg",
+      "benefits": [
+        "ផ្ញើឯកសារបានធំរហូតដល់ 4GB",
+        "ល្បឿនទាញយកឯកសារលឿនបំផុត",
+        "ប្តូរសំឡេងនិយាយទៅជាអត្ថបទ",
+        "ស្ទីកឃ័រ និងរូបអារម្មណ៍ពិសេសៗ",
+        "គ្រប់គ្រង Chat និងដាក់ Folder បន្ថែម",
+        "សញ្ញា Badge ផ្កាយលើ Profile",
+        "រូបភាព Profile មានចលនា (Video)",
+        "បិទការរំខានពីផ្ទាំងពាណិជ្ជកម្ម"
+      ],
+    },
+
+    "gemini": {
+      "cover": "p7.jpg",
+      "benefits": [
+        "ប្រើម៉ូឌែល Gemini Pro កម្រិតខ្ពស់បំផុត",
+        "ឆ្លើយតបលឿនបំផុត និងសួរបានមិនកំណត់",
+        "ជំនាញវិភាគឯកសារ និងសរសេរកូដស៊ីជម្រៅ",
+        "បង្កើតរូបភាព និងអត្ថបទបានស្អាតឥតខ្ចោះ",
+        "ភ្ជាប់ជំនួយការ AI ក្នុង Gmail និង Google Docs",
+        "សមត្ថភាពចងចាំ និងយល់ដឹងច្រើនជាងមុន"
+      ],
+    },
     "canva_pro": {
-      "name_km": "Canva Pro",
-      "price": "$5.00",
-      "access": "5 Devices",
-      "connect": "1 នាទី+",
-      "plan": "1 ឆ្នាំ",
-      "warranty": "1 ខែ",
-      "type": "គណនីផ្ទាល់ខ្លួន",
       "cover": "p1.jpg",
       "benefits": [
         "Canva Pro Gmail ផ្ទាល់ខ្លួន",
@@ -52,13 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "chatgpt_plus": {
-      "name_km": "ChatGPT Plus",
-      "price": "$4.99",
-      "access": "4 Device",
-      "connect": "12 នាទី+",
-      "plan": "1 ខែ",
-      "warranty": "30 ថ្ងៃ",
-      "type": "គណនីឯកជន",
       "cover": "p2.jpg",
       "benefits": [
         "គណនីផ្តល់ជូនឯកជន ប្រើ៤ឧបករណ៍",
@@ -70,13 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "windows_11_pro": {
-      "name_km": "Windows 11 Pro",
-      "price": "$5.00",
-      "access": "1 PC",
-      "connect": "10-20 នាទី+",
-      "plan": "Lifetime",
-      "warranty": "1 ខែ",
-      "type": "License Key",
       "cover": "p3.jpg",
       "benefits": [
         "Activate Windows 11 Pro ស្របច្បាប់",
@@ -85,13 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "netflix_premium": {
-      "name_km": "Netflix Premium",
-      "price": "$3.00",
-      "access": "1 Profile",
-      "connect": "5-10 នាទី+",
-      "plan": "Monthly",
-      "warranty": "1 ខែ",
-      "type": "គណនីផ្តល់ជូន",
       "cover": "p5.jpg",
       "benefits": [
         "មើល Movies/Series គុណភាព HD/4K",
@@ -100,13 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "youtube_premium": {
-      "name_km": "YouTube Premium",
-      "price": "$20.00",
-      "access": "1 Device",
-      "connect": "5-10 នាទី+",
-      "plan": "1 ឆ្នាំ",
-      "warranty": "1 ឆ្នាំ",
-      "type": "គណនីផ្តល់ជូន",
       "cover": "p6.jpg",
       "benefits": [
         "មើលគ្មាន Ads",
@@ -115,13 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "microsoft_office": {
-      "name_km": "Microsoft Office 365",
-      "price": "$20.00",
-      "access": "1 Account",
-      "connect": "10-20 នាទី+",
-      "plan": "1 ឆ្នាំ",
-      "warranty": "1 ឆ្នាំ",
-      "type": "Official Account",
       "cover": "p8.jpg",
       "benefits": [
         "Word / Excel / PowerPoint",
@@ -129,13 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "express_vpn": {
-      "name_km": "Express VPN",
-      "price": "$20.00",
-      "access": "Unlimited",
-      "connect": "5-10 នាទី+",
-      "plan": "1 ឆ្នាំ",
-      "warranty": "1 ឆ្នាំ",
-      "type": "VPN Service",
       "cover": "p10.jpg",
       "benefits": [
         "ល្បឿនលឿន និងស្ថេរ",
@@ -355,19 +325,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pmContent.innerHTML = `
       <img class="cover" src="${p.cover}" alt="${p.name_km}">
-      <p>១. អំពីកម្មវិធី</p>
-
-      <table class="simple-info-table">
-        <tr><td>ឈ្មោះកម្មវិធី</td><td>${p.name_km}</td></tr>
-        <tr><td>តម្លៃ</td><td>${p.price}</td></tr>
-        <tr><td>ការចូលប្រើ</td><td>${p.access}</td></tr>
-        <tr><td>រយៈពេលភ្ជាប់</td><td>${p.connect}</td></tr>
-        <tr><td>គម្រោង</td><td>${p.plan}</td></tr>
-        <tr><td>ការធានា</td><td>${p.warranty}</td></tr>
-        <tr><td>ប្រភេទ</td><td>${p.type}</td></tr>
-      </table>
-
-      <p>២. អត្ថប្រយោជន៍</p>
+      
+      <p>អត្ថប្រយោជន៍ និងការប្រើប្រាស់</p>
       <ul class="fix-list">
         ${benefits}
       </ul>
