@@ -1,0 +1,341 @@
+:root {
+  --bg: #F4F6F9;
+  --bg-card: #FFFFFF;
+  --text-main: #1A1A1A;
+  --text-sub: #666666;
+  --sheet-dur: 380ms;
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('GoogleSans-Bold.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Khala Mid';
+  src: url('GoogleSans-Medium.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'simple';
+  src: url('GoogleSans-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'regular';
+  src: url('GoogleSans-Regular.ttf') format('truetype');
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'simple', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+}
+
+/* ========================
+   FLOATING LOGO
+   ======================== */
+.floating-logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+}
+
+.floating-logo img {
+  height: 36px;
+}
+
+/* ========================
+   CONTAINER & PANEL
+   ======================== */
+.panel-container {
+  max-width: 100%;
+  padding-top: 60px;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+/* ========================
+   STORE GRID
+   ======================== */
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.store-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: left;
+}
+
+.store-header p {
+  font-family: 'simple', sans-serif;
+  font-size: 20px;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.item {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: filter 0.3s ease;
+}
+
+.item:hover img {
+  filter: brightness(0.8);
+}
+
+.info {
+  padding-left: 8px;
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+.info h3 {
+  font-family: 'Khala Mid', sans-serif !important;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0 0 5px;
+  color: var(--text-main);
+}
+
+.info p {
+  font-size: 15px;
+  font-family: 'simple', sans-serif;
+  color: var(--text-sub);
+  margin: 0 0 5px;
+}
+
+.info span {
+  color: #0099ff;
+  font-size: 14px;
+  font-family: 'bold';
+}
+
+.btm-store {
+  color: var(--text-sub);
+  font-family: 'simple', 'sans-serif';
+  padding: 30px 5px;
+  font-size: 14px;
+}
+
+/* ========================
+   PRODUCT MODAL (SHEET)
+   ======================== */
+body.sheet-open {
+  overflow: hidden;
+}
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.product-modal.is-visible {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* បន្ថែមការ Fade in/out ឲ្យ Backdrop ដើម្បីកុំឲ្យលោតខ្មៅមួយភ្លែត */
+.pm-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity var(--sheet-dur) ease;
+}
+
+.product-modal.is-open .pm-backdrop {
+  opacity: 1;
+}
+
+/* សម្រាប់ Desktop (Fade in / Fade out Smooth) */
+.pm-dialog {
+  position: absolute;
+  inset: 0;
+  background-color: #FFFFFF;
+  overflow: auto;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity var(--sheet-dur) ease;
+}
+
+.product-modal.is-open .pm-dialog {
+  opacity: 1;
+}
+
+.pm-close {
+  position: sticky;
+  top: 12px;
+  left: 12px;
+  margin: 12px 0 0 12px;
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #F4F6F9;
+  cursor: pointer;
+}
+
+.pm-close img {
+  filter: brightness(0); 
+}
+
+.pm-content {
+  padding: 0 16px 28px;
+}
+
+.content-store {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'simple', sans-serif;
+}
+
+.content-store .cover {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 14px;
+  display: block;
+  margin: 8px auto 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.content-store p {
+  color: var(--text-main);
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 10px 0 12px;
+  text-align: left;
+}
+
+.fix-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.fix-list li {
+  margin: 8px 0;
+  line-height: 1.4;
+  color: #444444;
+}
+
+.btn-store-info {
+  width: 170px;
+  height: 46px;
+  border-radius: 999px;
+  background-color: #0099ff;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  margin: 18px 0 10px;
+  font-family: 'simple', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 153, 255, 0.2);
+}
+
+.btn-store-info:hover {
+  background-color: #0061d8;
+  box-shadow: 0 4px 16px rgba(0, 97, 216, 0.3);
+}
+
+/* ========================
+   RESPONSIVE MEDIA QUERIES
+   ======================== */
+@media (max-width: 480px) {
+  .floating-logo {
+    top: 10px;
+    left: 10px;
+  }
+
+  .floating-logo img {
+    height: 34px;
+  }
+
+  .panel-container {
+    padding-top: 55px;
+  }
+
+  .store-header {
+    margin: 10px 0 10px 10px;
+    padding: 0;
+  }
+
+  .store-header p {
+    font-size: 18px;
+  }
+
+  .box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .item {
+    border-radius: 10px;
+  }
+
+  .info h3 {
+    font-size: 14px;
+  }
+
+  .info p {
+    font-size: 13px;
+  }
+
+  .info span {
+    font-size: 12px;
+  }
+  
+  /* សម្រាប់ Mobile (រុញចេញចូលពីចំហៀង មិនប្រើ Fade) */
+  .pm-dialog {
+    transform: translateX(100%);
+    opacity: 1; /* ដក opacity 0 ចេញ ទុកឲ្យវា Slide តែម្ដងទើបរលូន */
+    transition: transform var(--sheet-dur) cubic-bezier(.2,.9,.2,1);
+  }
+
+  .product-modal.is-open .pm-dialog {
+    transform: translateX(0);
+  }
+}
