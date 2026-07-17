@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ============================================
   const PRODUCTS = {
     "capcut_pro": {
+      "name": "CapCut Pro",
       "images": ["p9.jpg", "92.jpg", "93.jpg"],
       "benefits": [
         "ដោះសោ Effects និង Filters កម្រិត Premium ធ្វើអោយវីដេអូស្អាតឡើងភ្លាមៗ",
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "youtube_premium": {
+      "name": "YouTube Premium",
       "images": ["p4.jpg", "42.jpg", "43.jpg"],
       "benefits": [
         "មើលវីដេអូគ្មានពាណិជ្ជកម្ម រំខានអារម្មណ៍ទៀតទេ",
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "gemini": {
+      "name": "Gemini Pro",
       "images": ["p7.jpg", "72.jpg", "73.jpg"],
       "benefits": [
         "ប្រើលើគណនីផ្ទាល់ខ្លួន ថែមជូន 5ពាន់ជីកាបៃ Cloud Storage ដើម្បីរក្សាទុកឯកសាររបស់អ្នក",
@@ -56,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "canva_pro": {
+      "name": "Canva Pro",
       "images": ["p1.jpg", "12.jpg", "13.jpg"],
       "benefits": [
         "ដោះសោ Template Premium ជាច្រើន សម្រាប់ Poster Logo និង Social Media",
@@ -73,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "chatgpt_plus": {
+      "name": "ChatGPT Plus",
       "images": ["p2.jpg", "22.jpg", "23.jpg"],
       "benefits": [
         "ប្រើម៉ូឌែល AI កម្រិតខ្ពស់ ឆ្លាតជាង និងឆ្លើយតបបានត្រឹមត្រូវជាងមុន",
@@ -90,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "windows_11_pro": {
+      "name": "Windows 11 Pro",
       "images": ["p3.jpg", "32.jpg", "33.jpg"],
       "benefits": [
         "មាន BitLocker Encryption ការពារទិន្នន័យឲ្យមានសុវត្ថិភាពខ្ពស់",
@@ -107,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "netflix_premium": {
+      "name": "Netflix Premium",
       "images": ["p5.jpg", "52.jpg", "53.jpg"],
       "benefits": [
         "មើលភាពយន្ត និងស៊េរីល្បីៗជាច្រើនគ្មានពាណិជ្ជកម្ម",
@@ -124,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "microsoft_office": {
+      "name": "Microsoft Office 365",
       "images": ["p8.jpg", "82.jpg", "83.jpg"],
       "benefits": [
         "ប្រើ Word Excel PowerPoint និង Outlook កំណែថ្មីៗជានិច្ច",
@@ -141,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "telegram_premium": {
+      "name": "Telegram Premium",
       "images": ["p10.jpg", "102.jpg", "103.jpg"],
       "benefits": [
         "ល្បឿន Download ឯកសារលឿនជាងមុន ដោយគ្មានកំណត់ល្បឿន",
@@ -160,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // បន្ថែមទិន្នន័យសម្រាប់ សេវាកម្ម (Service)
     "service_poster": {
+      "name": "សេវាកម្មឌីហ្សាញ Poster",
       "images": ["poster.jpg", "poster2.jpg", "poster3.jpg"],
       "benefits": [
         "ឌីហ្សាញបែបទំនើប ទាក់ទាញ និងត្រូវតាមចំណូលចិត្តអតិថិជន",
@@ -169,6 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "service_logo": {
+      "name": "សេវាកម្មឌីហ្សាញ Logo",
       "images": ["logo_design.jpg", "logo2.jpg", "logo3.jpg"],
       "benefits": [
         "ឌីហ្សាញ Logo ប្រកបដោយអត្ថន័យ និងភាពច្នៃប្រឌិតខ្ពស់",
@@ -180,6 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // បន្ថែមទិន្នន័យសម្រាប់ អាជីវកម្ម (Business)
     "biz_tiktok": {
+      "name": "គណនី TikTok",
       "images": ["tiktok.jpg", "tiktok_2.jpg", "tiktok_3.jpg"],
       "benefits": [
         "គណនីមានចំនួនអ្នក Follow ពិតប្រាកដ និងសកម្ម",
@@ -189,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "biz_facebook": {
+      "name": "Facebook Page",
       "images": ["fb.jpg", "fb_2.jpg", "fb_3.jpg"],
       "benefits": [
         "ផេកមានសកម្មភាព (Engagement) និងមានអ្នក Like/Follow ពិតប្រាកដ",
@@ -198,6 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "biz_telegram": {
+      "name": "Telegram Group",
       "images": ["tg.jpg", "tg_2.jpg", "tg_3.jpg"],
       "benefits": [
         "គ្រុបមានសមាជិក (Members) សកម្មពិតប្រាកដ",
@@ -209,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // ============================================
-  // CATEGORY FILTER LOGIC (ថ្មី)
+  // CATEGORY FILTER LOGIC 
   // ============================================
   const tabBtns = document.querySelectorAll('.tab-btn');
   const storeItems = document.querySelectorAll('.box .item');
@@ -273,7 +287,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const buyBtn = document.getElementById("pmBuyBtn");
     if (buyBtn) {
-      buyBtn.onclick = () => window.open("https://t.me/smservicekh", "_blank", "noopener");
+      // រៀបចំសារស្វ័យប្រវត្តិ ផ្អែកតាមឈ្មោះទំនិញ
+      const productName = p.name || "នេះ";
+      const message = `សួស្តី! ខ្ញុំចង់ទិញទំនិញ ${productName} តើនៅមានស្តុកទេ? សូមផ្ញើព័ត៌មានបន្ថែម។`;
+      
+      // បម្លែងសារឲ្យទៅជាទម្រង់ដែលអាចភ្ជាប់ក្នុង URL បាន
+      const telegramUrl = `https://t.me/smservicekh?text=${encodeURIComponent(message)}`;
+      
+      buyBtn.onclick = () => window.open(telegramUrl, "_blank", "noopener");
     }
   }
 
@@ -290,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderProduct(productId);
       productModal.dataset.product = productId || "";
 
-      // ធ្វើការ Reset Scroll មកលើគេបង្អស់ពេលបើក (ដោះស្រាយបញ្ហាអូសចុះក្រោមហើយនៅក្រោមដដែល)
+      // ធ្វើការ Reset Scroll មកលើគេបង្អស់ពេលបើក
       if (dialog) {
         dialog.scrollTop = 0;
       }
