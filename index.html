@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>SM Digital - Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?version=1.0" />
   <link rel="icon" href="headlogo.png" type="image/png" />
 </head>
 <body>
@@ -17,55 +17,175 @@
   <div class="panel-container">
     <!-- Store Panel Only -->
     <div class="panel active" id="store">
+      
+      <!-- Welcome Banner -->
+      <div class="welcome-box">
+        <div class="welcome-text">
+          <p class="welcome-title">សួស្តី! សូមស្វាគមន៍មកកាន់ SM Digital</p>
+          <p class="welcome-desc">កន្លែងផ្តល់ជូនសេវាកម្មឡាយសិនកម្មវិធីកម្រិត Premium ផ្លូវការ លឿន និងមានទំនុកចិត្តខ្ពស់បំផុត។</p>
+        </div>
+        <div class="welcome-img">
+          <img src="hello.png" alt="Welcome Mascot">
+        </div>
+      </div>
+
+      <!-- Category Horizontal Bar (ថ្មី) -->
+      <div class="category-tabs">
+        <button class="tab-btn active" data-target="license">ឡាយសិន</button>
+        <button class="tab-btn" data-target="service">ឌីហ្សាញ</button>
+        <!-- <button class="tab-btn" data-target="business">សម្រាប់អាជីវកម្ម</button> -->
+      </div>
+
       <div class="store-header">
-        <p>សេវាកម្មឡាយសិនកម្មវិធី</p>
+        <p id="storeTitleText">ឡាយសិនកម្មវិធី</p>
       </div>
       
       <div class="box">
-        <div class="item product-open" data-product="capcut_pro" role="button" tabindex="0">
+        <!-- ================= [ ឡាយសិន ] ================= -->
+        <div class="item product-open" data-category="license" data-product="capcut_pro" role="button" tabindex="0">
           <img src="p9.jpg" alt="CapCut Pro">
-          <div class="info"><h3>CapCut Pro</h3><p><span>$4.99+</span> | គម្រោងមួយខែ</p></div>
+          <div class="info">
+            <p class="title-prod">CapCut Pro</p>
+            <p class="desc-prod"><span>$ 4.99</span> | គម្រោងមួយខែ</p>
+          </div>
         </div>
-        <div class="item product-open" data-product="youtube_premium" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="youtube_premium" role="button" tabindex="0">
           <img src="p4.jpg" alt="YouTube Premium">
-          <div class="info"><h3>YouTube Premium</h3><p><span>$14.99+</span> | គម្រោងប្រចាំខែនិងឆ្នាំ</p></div>
+          <div class="info">
+            <p class="title-prod">YouTube Premium</p>
+            <p class="desc-prod"><span>$ 7.99</span> | គម្រោង ៣ខែ</p>
+          </div>
         </div>
-        <div class="item product-open" data-product="gemini" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="gemini" role="button" tabindex="0">
           <img src="p7.jpg" alt="Gemini Pro">
-          <div class="info"><h3>Gemini Pro</h3><p><span>$6.99+</span> | គម្រោងមួយឆ្នាំ</p></div>
+          <div class="info">
+            <p class="title-prod">Gemini Pro</p>
+            <p class="desc-prod"><span>$ 6.99</span> | គម្រោង ១៨ខែ</p>
+          </div>
         </div>
-        <div class="item product-open" data-product="canva_pro" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="canva_pro" role="button" tabindex="0">
           <img src="p1.jpg" alt="Canva Pro Premium">
-          <div class="info"><h3>Canva Pro</h3><p><span>$5.99+</span> | គម្រោងមួយឆ្នាំ</p></div>
+          <div class="info">
+            <p class="title-prod">Canva Pro</p>
+            <p class="desc-prod"><span>$ 5.99</span> | គម្រោងមួយឆ្នាំ</p>
+          </div>
         </div>
-        <div class="item product-open" data-product="chatgpt_plus" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="chatgpt_plus" role="button" tabindex="0">
           <img src="p2.jpg" alt="ChatGPT Plus">
-          <div class="info"><h3>ChatGPT Plus</h3><p><span>$6.99+</span> | គម្រោងមួយខែ</p></div>
+          <div class="info">
+            <p class="title-prod">ChatGPT Plus</p>
+            <p class="desc-prod"><span>$ 6.99</span> | គម្រោងមួយខែ</p>
+          </div>
         </div>
-        <div class="item product-open" data-product="windows_11_pro" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="windows_11_pro" role="button" tabindex="0">
           <img src="p3.jpg" alt="Windows 11 Pro">
-          <div class="info"><h3>Windows 11 Pro</h3><p><span>$4.99+</span> | គម្រោងមួយជីវិត</p></div>
+          <div class="info">
+            <p class="title-prod">Windows 11 Pro</p>
+            <p class="desc-prod"><span>$ 4.99</span> | គម្រោងមួយជីវិត</p>
+          </div>
         </div>
-        <div class="item product-open" data-product="netflix_premium" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="netflix_premium" role="button" tabindex="0">
           <img src="p5.jpg" alt="Netflix Premium">
-          <div class="info"><h3>Netflix Premium</h3><p><span>$2.99+</span> | គម្រោងប្រចាំខែ</p></div>
+          <div class="info">
+            <p class="title-prod">Netflix Premium</p>
+            <p class="desc-prod"><span>$ 2.99</span> | គម្រោងប្រចាំខែ</p>
+          </div>
         </div>
-        <div class="item product-open" data-product="microsoft_office" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="microsoft_office" role="button" tabindex="0">
           <img src="p8.jpg" alt="Microsoft Office 365">
-          <div class="info"><h3>Office 365</h3><p><span>$9.99+</span> | គម្រោងមួយឆ្នាំ</p></div>
+          <div class="info">
+            <p class="title-prod">Office 365</p>
+            <p class="desc-prod"><span>$ 9.99</span> | គម្រោងមួយឆ្នាំ</p>
+          </div>
         </div>
-        <!-- បន្ថែម Telegram Premium ថ្មី -->
-        <div class="item product-open" data-product="telegram_premium" role="button" tabindex="0">
+        <div class="item product-open" data-category="license" data-product="telegram_premium" role="button" tabindex="0">
           <img src="p10.jpg" alt="Telegram Premium">
-          <div class="info"><h3>Telegram Premium</h3><p><span>$15.99+</span> | គម្រោងមានបីជម្រើស</p></div>
+          <div class="info">
+            <p class="title-prod">Telegram Premium</p>
+            <p class="desc-prod"><span>$ 15.99</span> | គម្រោង៣</p>
+          </div>
+        </div>
+
+        <!-- ================= [ សេវាកម្មឌីហ្សាញ ] ================= -->
+        <div class="item product-open" data-category="service" data-product="service_poster" role="button" tabindex="0" style="display: none;">
+          <img src="poster.jpg" alt="Poster Design">
+          <div class="info">
+            <p class="title-prod">ឌីហ្សាញ Poster</p>
+            <p class="desc-prod"><span>$ 9.99</span> | ក្នុងមួយផ្ទាំង</p>
+          </div>
+        </div>
+        <div class="item product-open" data-category="service" data-product="service_logo" role="button" tabindex="0" style="display: none;">
+          <img src="logo_design.jpg" alt="Logo Design">
+          <div class="info">
+            <p class="title-prod">ឌីហ្សាញ Logo</p>
+            <p class="desc-prod"><span>$ 30.00</span> | កញ្ចប់អាជីវកម្ម</p>
+          </div>
+        </div>
+
+        <!-- ================= [ អាជីវកម្ម ] ================= -->
+        <div class="item product-open" data-category="business" data-product="biz_tiktok" role="button" tabindex="0" style="display: none;">
+          <img src="tiktok.jpg" alt="TikTok Account">
+          <div class="info">
+            <p class="title-prod">គណនី TikTok</p>
+            <p class="desc-prod"><span>$ 50.00</span> | មានអ្នក Follow ស្រាប់</p>
+          </div>
+        </div>
+        <div class="item product-open" data-category="business" data-product="biz_facebook" role="button" tabindex="0" style="display: none;">
+          <img src="fb.jpg" alt="Facebook Page">
+          <div class="info">
+            <p class="title-prod">Facebook Page</p>
+            <p class="desc-prod"><span>$ 45.00</span> | ផេកមានសកម្មភាព</p>
+          </div>
+        </div>
+        <div class="item product-open" data-category="business" data-product="biz_telegram" role="button" tabindex="0" style="display: none;">
+          <img src="tg.jpg" alt="Telegram Group">
+          <div class="info">
+            <p class="title-prod">Telegram Group</p>
+            <p class="desc-prod"><span>$ 35.00</span> | សមាជិកពិតប្រាកដ</p>
+          </div>
         </div>
       </div>
       
       <center class="btm-store">
-        ទំនិញមានតែប៉ុណ្ណេះទេឥឡូវនេះ!
+        សូមអរគុណសម្រាប់ការគាំទ្រសេវាកម្មរបស់យើង!
       </center>
     </div>
   </div>
+
+  <!-- Footer (ថ្មី) -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <p class="footer-title">ឡាយសិនកម្មវិធី</p>
+        <ul>
+          <li>CapCut Pro</li>
+          <li>YouTube Premium</li>
+          <li>Gemini Pro / ChatGPT Plus</li>
+          <li>Canva Pro</li>
+          <li>Windows 11 Pro / Office 365</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-title">សេវាកម្មឌីហ្សាញ</p>
+        <ul>
+          <li>ឌីហ្សាញ Logo អាជីវកម្ម</li>
+          <li>ឌីហ្សាញ Poster ផ្សព្វផ្សាយ</li>
+          <li>ឌីហ្សាញ Banner និង Cover</li>
+        </ul>
+      </div>
+      <!-- <div class="footer-col">
+        <p class="footer-title">សេវាកម្មអាជីវកម្ម</p>
+        <ul>
+          <li>លក់គណនី TikTok (Follow ស្រាប់)</li>
+          <li>លក់ Facebook Page ពិតៗ</li>
+          <li>លក់ Telegram Group</li>
+        </ul>
+      </div> -->
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SM Digital. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    </div>
+  </footer>
 
   <!-- Product Detail Modal Sheet -->
   <div class="product-modal" id="productModal" aria-hidden="true">
@@ -80,6 +200,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?version=1.0"></script>
 </body>
 </html>
